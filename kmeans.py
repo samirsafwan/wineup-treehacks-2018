@@ -1,3 +1,14 @@
+from collections import defaultdict
+
+def dotProduct(vec1, vec2):
+    dotProduct = 0
+    for k in vec1:
+        dotProduct += vec1[k]*vec2[k]
+    return dotProduct
+
+
+
+
 def kmeans(examples, K, maxIters):
     clusters = random.sample(examples, K)
     results = []
@@ -39,4 +50,15 @@ def kmeans(examples, K, maxIters):
         prevLoss = curLoss
         curLoss = 0
         results = []
-    return clusters, results, prevLoss           
+    return clusters, results, prevLoss
+
+
+# Test:
+vec1 = defaultdict(int)
+vec2 = defaultdict(int)
+vec1[0] = 1
+vec2[0] = 1
+vec1[1] = 3
+vec2[4] = 4
+print dotProduct(vec1, vec2)
+
