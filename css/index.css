@@ -48,7 +48,7 @@ body {
     -moz-font-feature-settings: "liga" on;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #457EAC;
+    background-color: #232b2b;
     color: #FFF;
     font: 20px/1.5 Effra, lato, "helvetica neue", helvetica, arial, sans-serif;
     margin: 0;
@@ -182,7 +182,7 @@ li {
 .summary,
 .footer-headline,
 .footer-caption {
-    background-color: #457EAC;
+    background-color: #232b2b;
 }
 
 .background {
