@@ -186,7 +186,7 @@ li {
 }
 
 .background {
-    background-image: url(../img/background.png);
+    /* background-image: url(../img/background.png); */
     height: 100%;
     opacity: 0.5;
     position: absolute;
