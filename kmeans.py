@@ -1,3 +1,5 @@
+# Treehacks
+
 def kmeans(examples, K, maxIters):
     clusters = random.sample(examples, K)
     results = []
@@ -10,7 +12,7 @@ def kmeans(examples, K, maxIters):
         for i in range(K):
             newClusters.append({})
         for cluster in clusters:
-            centroidDotProducts.append(dotProduct(cluster, cluster))                                      
+            centroidDotProducts.append(dotProduct(cluster, cluster))
         for example in examples:
             exampleDot = dotProduct(example, example)
             curMin = 0
@@ -21,7 +23,7 @@ def kmeans(examples, K, maxIters):
                 if begin:
                     curMin = dist
                     assign = i
-                    begin = False 
+                    begin = False
                 else:
                     if dist < curMin:
                         curMin = dist
@@ -39,4 +41,4 @@ def kmeans(examples, K, maxIters):
         prevLoss = curLoss
         curLoss = 0
         results = []
-    return clusters, results, prevLoss           
+    return clusters, results, prevLoss
