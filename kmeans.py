@@ -58,4 +58,3 @@ vec2[0] = 1
 vec1[1] = 3
 vec2[4] = 4
 print dotProduct(vec1, vec2)
-
