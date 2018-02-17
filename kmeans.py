@@ -6,9 +6,6 @@ def dotProduct(vec1, vec2):
         dotProduct += vec1[k]*vec2[k]
     return dotProduct
 
-
-
-
 def kmeans(examples, K, maxIters):
     clusters = random.sample(examples, K)
     results = []
