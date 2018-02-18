@@ -6,7 +6,6 @@ const app = express();
 
 var R = require("r-script");
 
-
 // enable static final serving from public folder
 const path = require('path');
 app.use(express.static(__dirname));
@@ -19,6 +18,16 @@ app.get('/', function(req, res) {
 
 app.get('/quality', function(req, res) {
     res.sendFile(path.join(__dirname + '/quality.html'));
+});
+
+app.post('/api/places', (req, res) => {
+    const data = req.body.vals;
+    const vals = data.split(',');
+    console.log(vals);
+
+    var out = R(path.join(__dirname + "/treehacks2018rscript.R"))
+        .data("hello world", 1)
+        .callSync();
 });
 
 // app.set('view engine', 'hbs');
