@@ -43,7 +43,6 @@ var rangeSlider = function() {
                 vals.push(document.getElementById("" + i).value);
             }
             vals.push(document.getElementById("" + 12).value);
-            vals.push(document.getElementById("" + 13).value == 0 ? 'red' : 'white');
             wine_quality(vals);
         });
     });

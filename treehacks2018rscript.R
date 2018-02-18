@@ -1,15 +1,13 @@
 setwd("/Users/Aneesh/Desktop/treehacks-2018")
 needs(magrittr)
 library("e1071")
+library("caret")
 set.seed(512)
 
+load("wine_support_vector_machine.rba")
 do.call(rep, input)
-  load("wine_support_vector_machine.rba")
-  summary(svm.fit)
-  vec = data.frame(input)
-  print(vec)
-  rownames(vec) = colnames(data)
-  vec = t(vec)
-  print(vec)
-  as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
-
+  callnames = c("fixed.acidity","volatile.acidity","citric.acid","residual.sugar","chlorides","free.sulfur.dioxide","total.sulfur.dioxide", "density","pH","sulphates" ,"alcohol","quality", "good","color")
+  vec = data.frame(input)
+  rownames(vec) = callnames
+  vec = t(vec)
+  as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
