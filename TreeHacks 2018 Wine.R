@@ -44,8 +44,7 @@ vec = t(vec)
 as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
 
 do.call(rep, input) %>% 
-  wine_score = function(vec, svm.fit) {
     rownames(vec) = colnames(data)
     vec = t(vec)
     as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
-  }
+
