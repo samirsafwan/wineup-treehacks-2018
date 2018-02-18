@@ -648,9 +648,7 @@ input::-moz-focus-outer {
   border: 0;
 }
 
-
-
-.rating {
+#rating {
     font-size: 30px;
     color: white;
 }

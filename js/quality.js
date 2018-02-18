@@ -10,15 +10,8 @@ function wine_quality(vals) {
             }
         })
         .done(function(data) {
-            if (req.status >= 200 && req.status < 400) {
-                const data = JSON.parse(req.responseText);
-                console.log(data);
-                const rating = document.getElementById('rating');
-
-                rating.textContent = data;
-            } else {
-                console.log(req.status);
-            }
+            const rating = document.getElementById('rating');
+            rating.textContent = JSON.parse(data).num;
         });
 }
 

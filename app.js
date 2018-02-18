@@ -33,10 +33,9 @@ app.post('/api/places', (req, res) => {
 
     const result = require(path.join(__dirname + "/hack.json"));
     console.log(result);
-    res.send(result);
-});
 
-// app.set('view engine', 'hbs');
+    res.send({num: result } );
+});
 
 // respond to / (our single page)
 app.get('/', function(req, res) {

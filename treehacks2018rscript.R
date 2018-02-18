@@ -15,4 +15,4 @@ do.call(rep, input)
   vec = t(vec)
   temp = as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
 
-  write(temp, file = paste0( "/Users/Aneesh/Desktop/treehacks-2018",  "hack.json"))
+  write(temp, file = paste0( "/Users/Aneesh/Desktop/treehacks-2018/",  "hack.json"))
