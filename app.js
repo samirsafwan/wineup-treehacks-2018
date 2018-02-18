@@ -22,12 +22,13 @@ app.get('/quality', function(req, res) {
 
 app.post('/api/places', (req, res) => {
     const data = req.body.vals;
-    const vals = data.split(',');
+    const vals = data.split(',').map(Number);
     console.log(vals);
 
     var out = R(path.join(__dirname + "/treehacks2018rscript.R"))
-        .data("hello world", 1)
+        .data(vals, 1)
         .callSync();
+    console.log(out);
 });
 
 // app.set('view engine', 'hbs');

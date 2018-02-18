@@ -39,10 +39,10 @@ var rangeSlider = function() {
         range.on('input', function() {
             $(this).next(value).html(this.value);
             vals = []
-            for (i = 1; i < 13; i++) {
+            for (i = 1; i < 12; i++) {
                 vals.push(document.getElementById("" + i).value);
             }
-            vals.push(document.getElementById("" + 12).value);
+            vals.push(0);
             wine_quality(vals);
         });
     });
