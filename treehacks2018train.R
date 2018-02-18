@@ -35,5 +35,13 @@ pred =predict(svm.fit, test)
 mean(pred != test$quality)
 
 save(svm.fit, file = "wine_support_vector_machine.rba")
+vec = data.frame()
+callnames = c("fixed.acidity", "volatile.acidity","citric.acid" ,"residual.sugar" ,  "chlorides" ,"free.sulfur.dioxide" ,
+              "total.sulfur.dioxide", "density","pH"  ,"sulphates" ,"alcohol","quality","good"  , "color"  )    
+vec = data.frame(c(0,0,0,0,0,0,0,0,0,0,0,6,0,1))
+rownames(vec) = colnames(data)
+vec = t(vec)
+predict(svm.fit, vec)
+as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
 
 # Misclassification error is around 28%
