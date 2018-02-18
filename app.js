@@ -28,7 +28,12 @@ app.post('/api/places', (req, res) => {
     var out = R(path.join(__dirname + "/treehacks2018rscript.R"))
         .data(vals, 1)
         .callSync();
+
     console.log(out);
+
+    const result = require(path.join(__dirname + "/hack.json"));
+    console.log(result);
+    res.send(result);
 });
 
 // app.set('view engine', 'hbs');
