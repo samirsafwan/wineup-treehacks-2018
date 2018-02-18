@@ -1,4 +1,4 @@
-setwd("/Users/Aneesh/Desktop/treehacks-2018")
+setwd("~/Downloads")
 needs(magrittr)
 library("e1071")
 library("caret")
@@ -9,7 +9,7 @@ do.call(rep, input)
   callnames = c("fixed.acidity",       "volatile.acidity",     "citric.acid" ,        
                 "residual.sugar" ,      "chlorides" ,           "free.sulfur.dioxide" ,
                 "total.sulfur.dioxide", "density",              "pH"  ,                
-                "sulphates" ,           "alcohol",              "quality",             "good"  ,               "color"  )         
+                "sulphates" ,           "alcohol",              "quality" )         
 vec = data.frame(input)
 rownames(vec) = callnames
 vec = t(vec)
