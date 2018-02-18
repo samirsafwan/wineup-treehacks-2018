@@ -44,7 +44,8 @@ vec = t(vec)
 as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
 
 do.call(rep, input) %>% 
-    rownames(vec) = colnames(data)
-    vec = t(vec)
-    as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
+  vec = data.frame(input)
+  rownames(vec) = colnames(data)
+  vec = t(vec)
+  as.numeric(as.matrix(predict(svm.fit, vec))[1])-3
 
