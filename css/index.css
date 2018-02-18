@@ -255,7 +255,7 @@ button {
 }
 
 .nav-portrait {
-    background-image: url(../img/portrait.png);
+    background-image: url(../img/wineglass.png);
     background-size: 100%;
     height: 128px;
     left: calc(50% - 64px);
