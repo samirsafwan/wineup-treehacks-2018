@@ -11,7 +11,7 @@ Profile your wine and submit it on our website, and our ML-trained model will ra
 We used node.js to build out our backend. Our machine learning model was trained with a custom Python script that we spent the majority of our time developing. Our front end was built with a custom HTML & CSS theme developed by one of our team members.
 
 ## Accomplishments that I'm proud of
-Only one person on our team has used machine learning before. We were able to achieve an accuracy of 92% (on known data) due to our custom implementations, which we were super proud of.
+I wrote the machine learning script for the project, training a support vector machine with linear kernel for multi-class classification on a dataset of 5000+ wines with 10+ predictors each. We were able to achieve very high accuracy!
 
 ## What we learned
 We all learned a lot more about machine learning models and techniques!
